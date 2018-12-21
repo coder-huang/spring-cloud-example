@@ -7,6 +7,19 @@ spring:
       port: 8500
       discovery:
         register: false
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  threadpool:
+    default:
+      coreSize: 10
+  command:
+    default:
+      fallback:
+        enabled: false
+#        enabled: true
 server:
   port: 8503
+
 
